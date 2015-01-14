@@ -1,0 +1,31 @@
+<?php
+/*
+ *
+ * Template Name: Gallery
+ * 
+ * @package WordPress
+ * @subpackage ColinSandersPhotography
+ *
+ */
+
+//Get The Header
+get_template_parts( array( 'parts/html-header') ); ?>
+
+<div class="container">
+	<div class="cp-page">
+
+		<?php $query = new WP_Query( array('post_type' => 'jdcsp_gallery', 'posts_per_page' => 1000 ) );
+		while ( $query->have_posts() ) : $query->the_post(); ?>
+
+			<a class="item" href="<?php the_permalink() ?>">
+				<?php the_post_thumbnail('medium'); ?>
+			</a>
+
+			<?php  wp_reset_postdata();
+
+		endwhile; ?>
+	</div>
+</div>
+
+<?php //Get The Footer
+get_template_parts( array( 'parts/html-footer') ); ?>
