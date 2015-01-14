@@ -1,24 +1,21 @@
 /*
-Theme Name: 	Colin Sanders Photography
-Theme URI: 		http://www.art.thomasline.uk
-Description: 	Thomas Line Art
-Version: 		1.0
-Author: 		James Driscoll
-Author URI: 	http://www.james-driscoll.co.uk
+Theme Name:     Colin Sanders Photography
+Theme URI:      http://
+Description:    Colin Sanders Photography
+Version:        1.0
+Author:         James Driscoll
+Author URI:     http://www.jamesdriscoll.london
 Tags:
 */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ 
-
    --Colours--
    ==============================================
 *  Black: #000;
 *  White: #FFF;
 *  Pink: #E498CC;
-*  Blue: #90FFFD;
+*  Turquise: #90FFFD;
 *  Yellow: #FEFF90;
    ==============================================
-
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -119,13 +116,15 @@ body {
     width: 100%;
     margin: 0;
 }
-body.page-id-9 {
+body.page-template-page-jdtla_studio-php,
+body.single-jdtla_studio {
     background: #FEFF90;
 }
-body.page-id-11 {
+body.page-template-page-jdtla_work-php,
+body.single-jdtla_work {
     background: #FFF;
 }
-body.page-id-50 {
+body.cv {
     background: #90FFFD;
 }
 
@@ -147,23 +146,23 @@ body.page-id-50 {
     color: #87D4B4;
     background: #FEFF90;
     padding: 10px;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
 .header .title a:hover {
     background: #87D4B4;
     color: #E494CB;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
 
-/* --Top Navigation Items--------------------------------------------------- */
+/* --Top Navigation Items--------------------- */
 .top-nav ul {
     padding-left: 0px;
 }
@@ -178,81 +177,83 @@ body.page-id-50 {
     width: 220px;
     height: 35px;
     line-height: 35px;
-    font-weight: bold;
-}
-.top-nav li a:hover {
-    opacity: 0.7;
 }
 .top-nav .nav-item-1 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
     color: #E498CC;
 }
 .top-nav .nav-item-1 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
     color: #000;
 }
 .top-nav .nav-item-2 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
     color: #FEFF90;
 }
 .top-nav .nav-item-2 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    color: #000;
 }
 .top-nav .nav-item-3 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
     color: #FFF;
 }
 .top-nav .nav-item-3 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    color: #000;
 }
 .top-nav .nav-item-4 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
     color: #90FFFD;
 }
 .top-nav .nav-item-4 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    color: #000;
 }
 .top-nav ul .current-page-ancestor:hover a,
 .top-nav ul .current-page-ancestor a,
 .top-nav ul .current-page-item:hover a,
 .top-nav ul .current-menu-item:hover a,
 .top-nav ul .current-page-item a,
-.top-nav ul .current-menu-item a {
+.top-nav ul .current-menu-item a,
+.single-jdtla_studio .top-nav ul .nav-item-2 a,
+.single-jdtla_work .top-nav ul .nav-item-3 a {
     color: #000;
+}
+.top-nav ul .current-menu-item:hover a {
+    opacity: 0.6;
 }
 
 /* --Home Page Items--------------------------------------------------------- */
@@ -264,94 +265,6 @@ body.page-id-50 {
 .home-logo {
     display: inline;
 }
-.home-nav {
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-.home-nav ul {
-    padding-left: 0px;
-}
-.home-nav li {
-    display: inline;
-}
-.home-nav li a {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    font-size: 18px;
-    width: 220px;
-    height: 60px;
-    line-height: 60px;
-}
-.home-nav .nav-item-1 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #90FFFD;
-    color: #E494CB;
-}
-.home-nav .nav-item-1 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #F5F5F5;
-}
-.home-nav .nav-item-2 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #FEFF90;
-    color: #87D4B4;
-}
-.home-nav .nav-item-2 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #F5F5F5;
-}
-.home-nav .nav-item-3 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #87D4B4;
-    color: #E494CB;
-}
-.home-nav .nav-item-3 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #F5F5F5;
-}
-.home-nav .nav-item-4 a {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: none;
-    color: #E498CC;
-}
-.home-nav .nav-item-4 a:hover {
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    background: #F5F5F5;
-}
 
 /* --CV Page Items---------------------------------------------------------- */
 .cv .description {
@@ -361,49 +274,74 @@ body.page-id-50 {
     font-family: 'Lato', 'Helvetica', 'Arial';
 }
 
-/* --Studio Custom Post Items------------------------------------------------ */
+/* --Custom Post Items------------------------------------------------------- */
 /* --Page Items-------------------------------*/
-.studio {
-    min-height: 700px;
+.cp-page{
     margin: 0 auto;
 }
-a.studio-item {
+a.item {
     display:inline-block;
     padding-left: 0px;
     margin: 2.5px;
     text-decoration: none;
 }
-a.studio-item img {
+a.item img {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
-a.studio-item .studio-title {
-    text-align: center;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
-    font-size: 15px;
-    font-weight: normal;
+a.item img.grey {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
-a.studio-item:hover {
-    opacity: 0.7;
+.item img#colour {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
+
 /* --Single Items-----------------------------*/
-.single-studio img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.single-studio .details {
-    list-style: none;
+.cp-single {
     font-family: 'Lato', 'Helvetica', 'Arial';
     color: #000;
+    font-size: 14px;
+    font-weight: normal;
+}
+.cp-single img {
+    display: block;
+    margin-top: 20px;
+}
+.cp-single .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+.cp-single .description p {
     font-size: 15px;
     font-weight: normal;
 }
-.single-studio .details .title h1 {
-    font-size: 40px;
-    font-weight: bold;
+
+/* --Work Category Items----------------------*/
+.pc .pc-title {
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 /* --Footer Items------------------------------------------------------------ */
@@ -414,24 +352,25 @@ a.studio-item:hover {
 }
 .footer div {
     font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
 }
 .footer a {
     text-decoration: none;
+    color: #000;
 }
 .footer .email a {
     float: left;
-    color: #000;
     display: block;
 }
 .footer .copy {
-    color: #000;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 .footer .developer a {
     float: right;
-    color: #000;
 }
 .footer a:hover {
     text-decoration: underline;
