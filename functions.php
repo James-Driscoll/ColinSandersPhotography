@@ -68,14 +68,24 @@
   ------------------------------------------------------- */
   add_theme_support( 'post-thumbnails' ); 
 
+  if (class_exists('MultiPostThumbnails')) {
+      new MultiPostThumbnails(
+          array(
+              'label' => 'Secondary Image',
+              'id' => 'secondary-image',
+              'post_type' => 'jdtla_studio'
+              
+          )
+      );
+  }
+
 
   /* --------------------------------------------------
    * Register Custom Menu
     -------------------------------------------------- */
   register_nav_menus(
     array(
-      'top_navigation' => "Main Navigation Menu",
-      'home_navigation' => "Home Navigation Menu"
+      'top_navigation' => "Top Navigation Menu"
     )
   );
 
@@ -85,91 +95,129 @@
   ------------------------------------------------------- */
   //hook into the init action and call create_book_taxonomies when it fires
   add_action( 'init', 'custom_post_studio');
+  add_action( 'init', 'custom_post_work');
 
-  //create two taxonomies, genres and writers for the post type "book"
   function custom_post_studio() {
 
+    // creating (registering) the custom type 
+    register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+      // let's now add all the options for this post type
+      array('labels' => array(
+        'name' => __('Studios', 'post type general name'), /* The Title of the Group */
+        'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+        'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+        'add_new_item' => __('Add New Studio'), /* Add New Display Title */
+        'edit' => __( 'Edit' ), /* Edit Dialog */
+        'edit_item' => __('Edit Studio'), /* Edit Display Title */
+        'new_item' => __('New Studio'), /* New Display Title */
+        'view_item' => __('View Studios'), /* View Display Title */
+        'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
+        'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
+        'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+        'parent_item_colon' => ''
+        ), /* end of arrays */
+        'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
+        'public' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_ui' => true,
+        'query_var' => true,
+        'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        /* the next one is important, it tells what's enabled in the post editor */
+        'supports' => array( 'title', 'editor', 'thumbnail')
+      ) /* end of options */
+    ); /* end of register post type */
 
-  // creating (registering) the custom type 
-  register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-    // let's now add all the options for this post type
-    array('labels' => array(
-      'name' => __('Studios', 'post type general name'), /* The Title of the Group */
-      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
-      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Studio'), /* Add New Display Title */
-      'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Studio'), /* Edit Display Title */
-      'new_item' => __('New Studio'), /* New Display Title */
-      'view_item' => __('View Studios'), /* View Display Title */
-      'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
-      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
-      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
-      'parent_item_colon' => ''
-      ), /* end of arrays */
-      'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
-      'public' => true,
-      'publicly_queryable' => true,
-      'exclude_from_search' => false,
-      'show_ui' => true,
-      'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'thumbnail',)
-    ) /* end of options */
-  ); /* end of register post type */
-} 
+  }
 
-/* -------------------------------------------------------
-  Custom Meta
-------------------------------------------------------- */
-// Re-define meta box path and URL
-define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
-define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
+  function custom_post_work() {
 
-add_action( 'init', 'create_metaboxes');
+    // creating (registering) the custom type 
+    register_post_type( 'jdtla_work', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+      // let's now add all the options for this post type
+      array('labels' => array(
+        'name' => __('Works', 'post type general name'), /* The Title of the Group */
+        'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+        'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+        'add_new_item' => __('Add New Work'), /* Add New Display Title */
+        'edit' => __( 'Edit' ), /* Edit Dialog */
+        'edit_item' => __('Edit Work'), /* Edit Display Title */
+        'new_item' => __('New Work'), /* New Display Title */
+        'view_item' => __('View Work'), /* View Display Title */
+        'search_items' => __('Search Works'), /* Search Custom Type Title */ 
+        'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
+        'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+        'parent_item_colon' => ''
+        ), /* end of arrays */
+        'description' => __( 'This is the Work custom post type.' ), /* Custom Type Description */
+        'public' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_ui' => true,
+        'query_var' => true,
+        'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        /* the next one is important, it tells what's enabled in the post editor */
+        'supports' => array( 'title', 'editor', 'thumbnail')
+      ) /* end of options */
+    ); /* end of register post type */
 
-function create_metaboxes(){
-    require "meta/meta-box.php";
-    $prefix     = 's';
+  } 
 
-    $meta_boxes[] = array(
-        'id'    => $prefix . 'details',
-        'title' => 'Studio Details',
-        'pages' => array( 'jdtla_studio'),
-        'content' => 'normal',
-        'fields' => array(
-            array(
-                'name' => 'Materials',
-                'id'   => "{$prefix}materials",
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => 'Parameter 2',
-                'id'   => "{$prefix}par2",
-                'type' => 'textarea',
-            ), 
-            array(
-                'name' => 'Parameter 3',
-                'id'   => "{$prefix}par3",
-                'type' => 'textarea',
-            ), 
-            array(
-                'name' => 'Parameter 4',
-                'id'   => "{$prefix}par4",
-                'type' => 'textarea',
-            ),                                   
-        )
+  /* --------------------------------------------------
+   Custom Work Categories
+  -----------------------------------------------------*/
+  //hook into the init action and call create_book_taxonomies when it fires
+  add_action( 'init', 'create_category_taxonomies', 0 );
+
+  //create two taxonomies, genres and writers for the post type "book"
+  function create_category_taxonomies()   {
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+      'name' => "Work Categories",
+      'singular_name' => "Category",
+      'search_items' =>  "Search Categories",
+      'all_items' => "All Product Categories",
+      'parent_item' => "Parent Category",
+      'parent_item_colon' => "Parent Category:",
+      'edit_item' => "Edit Category",
+      'update_item' => "Update Category",
+      'add_new_item' => "Add New Category",
+      'new_item_name' => "New Category",
+      'menu_name' => "Categories",
     );
 
-    if (class_exists( 'RW_Meta_Box' )) {
-            foreach ( $meta_boxes as $meta_box ) {
-                    new RW_Meta_Box( $meta_box );
-            }
+    register_taxonomy('categories','jdtla_work', array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'uqery_var' => true,
+      'rewrite' => array( 'slug' => 'categories' ),
+    ));
+  }
+
+
+function pa_in_taxonomy($tax, $term, $_post = NULL) {
+    // if neither tax nor term are specified, return false
+    if ( !$tax || !$term ) { return FALSE; }
+    // if post parameter is given, get it, otherwise use $GLOBALS to get post
+    if ( $_post ) {
+        $_post = get_post( $_post );
+    } else {
+        $_post =& $GLOBALS['post'];
     }
+    // if no post return false
+    if ( !$_post ) { return FALSE; }
+    // check whether post matches term belongin to tax
+    $return = is_object_in_term( $_post->ID, $tax, $term );
+    // if error returned, then return false
+    if ( is_wp_error( $return ) ) { return FALSE; }
+    return $return;
 }
 
   /* -------------------------------------------------------
