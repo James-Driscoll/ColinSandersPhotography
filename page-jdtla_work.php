@@ -18,13 +18,14 @@ get_template_parts( array( 'parts/html-header') ); ?>
 			<?php $title = False; ?>
 			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
 			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "video")) {
+				if (pa_in_taxonomy("categories", "Family")) {
 					if ($title == False) { ?>
-						<h1 class="pc-title">Video</h1>
+						<h1 class="pc-title">Family</h1>
 						<?php $title = True;
 					} ?>
 					<a class="work-item" href="<?php the_permalink() ?>">
 						<?php the_post_thumbnail('medium'); ?>
+						<?php the_title(); ?>
 					</a>
 				<?php } ?>
 				<?php  wp_reset_postdata(); ?>
@@ -35,13 +36,14 @@ get_template_parts( array( 'parts/html-header') ); ?>
 			<?php $title = False; ?>
 			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
 			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "2-D")) {
+				if (pa_in_taxonomy("categories", "Industry")) {
 					if ($title == False) { ?>
-						<h1 class="pc-title">2-D</h1>
+						<h1 class="pc-title">Industry</h1>
 						<?php $title = True;
 					} ?>
 					<a class="work-item" href="<?php the_permalink() ?>">
 						<?php the_post_thumbnail('medium'); ?>
+						<?php the_title(); ?>
 					</a>
 				<?php } ?>
 				<?php  wp_reset_postdata(); ?>
@@ -52,30 +54,14 @@ get_template_parts( array( 'parts/html-header') ); ?>
 			<?php $title = False; ?>
 			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
 			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "3-D")) {
+				if (pa_in_taxonomy("categories", "Motorsport")) {
 					if ($title == False) { ?>
-						<h1 class="pc-title">3-D</h1>
+						<h1 class="pc-title">Motorsport</h1>
 						<?php $title = True;
 					} ?>
 					<a class="work-item" href="<?php the_permalink() ?>">
 						<?php the_post_thumbnail('medium'); ?>
-					</a>
-				<?php } ?>
-				<?php  wp_reset_postdata(); ?>
-			<?php endwhile; ?>
-		</div>
-
-		<div class="pc pc-4">
-			<?php $title = False; ?>
-			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
-			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "installation")) {
-					if ($title == False) { ?>
-						<h1 class="pc-title">Installation</h1>
-						<?php $title = True;
-					} ?>
-					<a class="work-item" href="<?php the_permalink() ?>">
-						<?php the_post_thumbnail('medium'); ?>
+						<?php the_title(); ?>
 					</a>
 				<?php } ?>
 				<?php  wp_reset_postdata(); ?>
