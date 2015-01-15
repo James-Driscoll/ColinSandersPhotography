@@ -19,6 +19,9 @@
   ?>
 
   <!-- Jumbotron! -->
+  <a class="home-logo container" href="<?php echo get_site_url(); ?>">
+    <img class="jumbotron" src="<?php echo get_stylesheet_directory_uri() ?>/images/jumbotron.jpg" alt="Colin Sanders Photography logo">
+  </a>
 
   <!-- Content ends here -->
 
@@ -26,3 +29,4 @@
     //Get the footer
     get_template_parts( array( 'parts/html-footer') );
   ?>
+
