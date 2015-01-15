@@ -115,11 +115,12 @@ body {
     background: #FFF;
     width: 100%;
     margin: 0;
+    height: 3000px;
 }
 
 /* --Container Items-------------------------------------------------------- */
 .container {
-    width: 90%;
+    width: 1200px;
     margin: 0px auto;
 }
 
@@ -156,89 +157,33 @@ body {
     padding-left: 0px;
 }
 .top-nav li {
-    display: block;
+    display: inline-block;
 }
 .top-nav li a {
-    display: inline-block;
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-size: 30px;
-    width: 220px;
-    height: 35px;
-    line-height: 35px;
-}
-.top-nav .nav-item-1 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #E498CC;
-}
-.top-nav .nav-item-1 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
     color: #000;
-}
-.top-nav .nav-item-2 a {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #FEFF90;
 }
-.top-nav .nav-item-2 a:hover {
+.top-nav li a:hover {
+    opacity: 0.7;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
-    color: #000;
-}
-.top-nav .nav-item-3 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #FFF;
-}
-.top-nav .nav-item-3 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
-}
-.top-nav .nav-item-4 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #90FFFD;
-}
-.top-nav .nav-item-4 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
 }
 .top-nav ul .current-page-ancestor:hover a,
 .top-nav ul .current-page-ancestor a,
 .top-nav ul .current-page-item:hover a,
 .top-nav ul .current-menu-item:hover a,
 .top-nav ul .current-page-item a,
-.top-nav ul .current-menu-item a,
-.single-jdtla_studio .top-nav ul .nav-item-2 a,
-.single-jdtla_work .top-nav ul .nav-item-3 a {
+.top-nav ul .current-menu-item a {
     color: #000;
 }
 .top-nav ul .current-menu-item:hover a {
