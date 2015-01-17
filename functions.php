@@ -102,7 +102,7 @@
     register_post_type( 'jdtla_work', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
       // let's now add all the options for this post type
       array('labels' => array(
-        'name' => __('Work', 'post type general name'), /* The Title of the Group */
+        'name' => __('Gallery', 'post type general name'), /* The Title of the Group */
         'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
         'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
         'add_new_item' => __('Add New Work'), /* Add New Display Title */
