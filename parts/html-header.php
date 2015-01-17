@@ -4,23 +4,23 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html class="no-js" lang="en"><!--<![endif]-->
-	<head>   
-       
+	<head>
+    
 		<title><?php wp_title( 'Colin Sanders |' ); ?></title>
 		
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	  	<meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Google Font -->
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-        <!-- Icon  -->
+    <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
-        <!-- Custom Style -->
-        <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
+    <!-- Custom Style -->
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
 
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="<?php echo get_bloginfo("url"); ?>" />
@@ -39,21 +39,16 @@
 		<!-- Site Javascript -->
 		<script src="<?php echo get_stylesheet_directory_uri();?>/js/site.js"></script>
 
-
-
 		<?php wp_head(); ?>
 
-    	<script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
+    <script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
         
-    </head>
+  </head>
 
-    <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
 
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
 
-        <div class="header">
+    <div class="header">
             	
 			<?php
 				//Output the navigation
@@ -65,3 +60,4 @@
 			?>
 
 		</div>
+		

@@ -29,4 +29,3 @@
     //Get the footer
     get_template_parts( array( 'parts/html-footer') );
   ?>
-
