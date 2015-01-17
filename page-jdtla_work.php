@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Template Name: Work
+ * Template Name: Portfolio
  * 
  * @package WordPress
  * @subpackage ThomasLineArt
@@ -12,61 +12,12 @@
 get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="container">
-	<div class="page-studio">
+	<div class="page-portfolio">
 
-		<div class="pc pc-1">
-			<?php $title = False; ?>
-			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
-			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "Family")) {
-					if ($title == False) { ?>
-						<h1 class="pc-title">Family</h1>
-						<?php $title = True;
-					} ?>
-					<a class="work-item" href="<?php the_permalink() ?>">
-						<?php the_post_thumbnail('medium'); ?>
-						<?php the_title(); ?>
-					</a>
-				<?php } ?>
-				<?php  wp_reset_postdata(); ?>
-			<?php endwhile; ?>
-		</div>
-
-		<div class="pc pc-2">
-			<?php $title = False; ?>
-			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
-			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "Industry")) {
-					if ($title == False) { ?>
-						<h1 class="pc-title">Industry</h1>
-						<?php $title = True;
-					} ?>
-					<a class="work-item" href="<?php the_permalink() ?>">
-						<?php the_post_thumbnail('medium'); ?>
-						<?php the_title(); ?>
-					</a>
-				<?php } ?>
-				<?php  wp_reset_postdata(); ?>
-			<?php endwhile; ?>
-		</div>
-
-		<div class="pc pc-3">
-			<?php $title = False; ?>
-			<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
-			while ( $query->have_posts() ) : $query->the_post();
-				if (pa_in_taxonomy("categories", "Motorsport")) {
-					if ($title == False) { ?>
-						<h1 class="pc-title">Motorsport</h1>
-						<?php $title = True;
-					} ?>
-					<a class="work-item" href="<?php the_permalink() ?>">
-						<?php the_post_thumbnail('medium'); ?>
-						<?php the_title(); ?>
-					</a>
-				<?php } ?>
-				<?php  wp_reset_postdata(); ?>
-			<?php endwhile; ?>
-		</div>
+	<a href="#" class="category"><h2>Motorsport</h2><img src="<?php echo get_stylesheet_directory_uri() ?>/images/.jpg"></a>
+	<a href="#" class="category"><h2>Industry</h2><img src="<?php echo get_stylesheet_directory_uri() ?>/images/.jpg"></a>
+	<a href="#" class="category"><h2>Family</h2><img src="<?php echo get_stylesheet_directory_uri() ?>/images/.jpg"></a>
+	<a href="#" class="category"><h2>Chicken</h2><img src="<?php echo get_stylesheet_directory_uri() ?>/images/.jpg"></a>
 
 	</div>
 </div>
