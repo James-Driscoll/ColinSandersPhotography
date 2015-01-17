@@ -48,8 +48,10 @@
 
   <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
 
-    <div class="header">
-            	
+    <div class="header container">
+      
+    	<h1 class="title"><a href="<?php echo get_site_url(); ?>">Colin Sanders Photography</a></h1>
+
 			<?php
 				//Output the navigation
 			  	$args = array(
@@ -60,4 +62,3 @@
 			?>
 
 		</div>
-		
