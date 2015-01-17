@@ -151,6 +151,7 @@ body {
 }
 .top-nav li {
     display: inline-block;
+    padding-right: 40px;
 }
 .top-nav li a {
     text-decoration: none;
