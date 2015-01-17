@@ -257,7 +257,6 @@ a.item img {
 .page-portfolio .category {
     display: inline-block;
     width: 24%;
-    border: 1px solid Black;
 }
 .page-portfolio .category h2 {
     text-decoration: none;
@@ -267,6 +266,9 @@ a.item img {
 }
 .page-portfolio a {
     text-decoration: none;
+}
+.page-portfolio a:hover {
+    opacity: 0.7;
 }
 
 /* --Footer Items------------------------------------------------------------ */
