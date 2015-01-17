@@ -1,9 +1,7 @@
     <!-- Footer begins here -->
     <div class="container footer">
-        <div class="email"><a href="mailto:enquiries@thomasline.uk" target="_blank">enquiries@thomasline.uk</a></div>
-        <div class="developer"><a href="http://jamesdriscoll.london" target="_blank">Wordpress theme developed by James Driscoll</a></div>
-        <div class="copy">Copyright Thomas Line</div>
-            
+        <a class="email" href="mailto:enquiries@domain" target="_blank">enquiries@domain</a>
+        <a class="developer" href="http://jamesdriscoll.london" target="_blank">Wordpress theme developed by James Driscoll</a>
     </div>
     <!-- Footer ends here -->  
 
